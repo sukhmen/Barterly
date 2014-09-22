@@ -1,0 +1,225 @@
+
+/**
+ * Bootstrap Fonts
+ */
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
+    src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+/**
+ *Font Awesome Fonts
+ */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+ * App-wide Styles
+ */
+
+ html{
+    background-color: #26497d;
+    /*display: block;*/
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+}
+
+
+#banner{
+    text-align:center; 
+}
+
+.hero-unit {
+    margin:0 auto;
+    color: #F5F5F5;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    
+}
+
+.footer {
+    text-align: center;
+    /*padding: 30px 0;
+    margin-top: 70px;*/
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color:white;
+    border-top: 1px solid #E5E5E5;
+}
+
+.homeCustom{
+    /*display: block;*/
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    color:white;
+    background-color:#26497d;
+    text-align: center;
+    margin-top: -25px;
+    padding-top: 25px;
+    left:0;
+    right:0;
+}
+
+.messageDiv{
+    text-align: center;
+    margin:0 auto;
+}
+#mc_embed_signup div.response{
+    margin:0 auto;
+    float:none;
+}
+
+.customButton{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    color:white;
+}
+
+.customInput{
+    text-align: center;
+    width:400px;    
+}
+
+.mailInput{
+    width:350px;
+    color:#26497d;
+}
+
+.customDiv{
+    display:inline-block;
+    padding-right: 35px;
+    padding-left: 35px;
+    vertical-align: top;
+    width:420px;
+}
+
+p{
+    line-height: 25px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    display: block;
+}
+
+.courses{
+    text-align: center;
+}
+
+.courseTitle{
+    font-size: 20px;
+    display:block;
+}
+
+.containerCustom{
+    text-align: center;
+    margin:0 auto;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.navbar-default {
+    background-color: #26497d;
+    border-color: white;
+    font-size: 15px;
+}
+.navbar-default .navbar-brand {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #fff7f2;
+}
+.navbar-default .navbar-text {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #26497d;
+    background-color: #fff7f2;
+    border-top-left-radius:.8em;
+    border-top-right-radius:.8em;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff7f2;
+    background-color: #142d51;
+    border-top-left-radius:.8em;
+    border-top-right-radius:.8em;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff7f2;
+    background-color: #142d51;
+}
+.navbar-default .navbar-toggle {
+    border-color: #142d51;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #142d51;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #f1f5ff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #f1f5ff;
+}
+.navbar-default .navbar-link {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-link:hover {
+    color: #fff7f2;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #f1f5ff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #fff7f2;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #fff7f2;
+        background-color: #142d51;
+    }
+}

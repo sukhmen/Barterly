@@ -1,0 +1,60 @@
+img#bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  z-index: -1;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img#bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.hero-unit {
+    margin:0 auto;
+    color: #F5F5F5;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    /*background: #26497d;*/
+    padding-top: 5px;
+}
+
+.footer {
+    
+    text-align: center;
+    /*padding: 30px 0;
+    margin-top: 70px;*/
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color:white;
+    border-top: 1px solid #E5E5E5;
+}
+
+.mainCustom{
+    /*display: block;*/
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+}
+
+p{
+    line-height: 25px;
+}
+
