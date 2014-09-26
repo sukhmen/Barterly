@@ -1,27 +1,483 @@
-<div style="float:left;padding-left:10px;">
-    <div id="banner">
-        <img src="http://getbarterly.com/1/logo.png" alt="logo">
+<!-- <div class="fullscreen background" style="background-image:url('../../assets/images/finalbackground.jpg');" > -->
+<!-- <link rel="stylesheet" href="app/main/main.css"> -->
+<!-- <link rel="stylesheet" href="app/app.css"> --> 
+<style type='text/css'>
+
+/**
+ * Bootstrap Fonts
+ */
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
+    src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+/**
+ *Font Awesome Fonts
+ */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+ * App-wide Styles
+ */
+
+ html{
+    background-color: #142638;
+    /*display: block;*/
+    /*-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;*/
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+}
+
+body{
+    background-color: #142638;
+}
+
+#banner{
+    text-align:center; 
+}
+
+.hero-unit {
+    margin:0 auto;
+    color: #F5F5F5;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    
+}
+
+.footer {
+    background-color: #142638;
+    text-align: center;
+    /*padding: 30px 0;
+    margin-top: 70px;*/
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color:white;
+    border-top: 1px solid #E5E5E5;
+}
+
+.homeCustom{
+    /*display: block;*/
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    color:white;
+    background-color:#142638;
+    text-align: center;
+    margin-top: -50px;
+    padding-top: 25px;
+    left:0;
+    right:0;
+}
+
+.messageDiv{
+    text-align: center;
+    margin:0 auto;
+}
+#mc_embed_signup div.response{
+    margin:0 auto;
+    float:none;
+}
+
+.customButton{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    color:white;
+}
+
+.customInput{
+    text-align: center;
+    width:400px;
+    font-weight: normal;    
+}
+
+.mailInput{
+    width:350px;
+    color:#26497d;
+}
+
+.customDiv{
+    display:inline-block;
+    padding-right: 35px;
+    padding-left: 35px;
+    vertical-align: top;
+    width:440px;
+    margin-top: 95px;
+}
+
+#fifth {
+    font-family: helvetica neue;
+    font-weight: bold;
+    font-size: 55px;
+    color: white;
+    margin-top: 90px;
+    text-align: center;
+}
+
+
+p{
+    line-height: 25px;
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    display: block;
+}
+
+.courses{
+    text-align: center;
+}
+
+.courseTitle{
+    font-size: 20px;
+    display:block;
+}
+
+.containerCustom{
+    text-align: center;
+    margin:0 auto;
+}
+
+.share{
+    padding:10px;
+}
+a{
+    color:white;
+    font-style: none;
+    text-decoration: none;
+    cursor: default;
+}
+
+a:hover.notCurrent{
+    color:#c1b9b9;
+    text-decoration: none;
+}
+
+a:hover.currentPage{
+    color:white;
+    text-decoration: none;
+}
+
+.topNav{
+    top:-24px;
+}
+
+.notCurrent{
+    /*color:#5cb85c;*/
+    color:#c1b9b9;
+}
+
+.customNav{
+    font-family: helvetica neue, arial, sans-serif;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    font-size: 45px;
+    float:right;
+    padding-top: 40px;
+}
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.navbar-default {
+    background-color: #142638;
+    border-color: white;
+    font-size: 15px;
+}
+.navbar-default .navbar-brand {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #fff7f2;
+}
+.navbar-default .navbar-text {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #26497d;
+    background-color: #fff7f2;
+    border-top-left-radius:.8em;
+    border-top-right-radius:.8em;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff7f2;
+    background-color: #142d51;
+    border-top-left-radius:.8em;
+    border-top-right-radius:.8em;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff7f2;
+    background-color: #142d51;
+}
+.navbar-default .navbar-toggle {
+    border-color: #142d51;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #142d51;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #f1f5ff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #f1f5ff;
+}
+.navbar-default .navbar-link {
+    color: #f1f5ff;
+}
+.navbar-default .navbar-link:hover {
+    color: #fff7f2;
+}
+@media (max-width: 1200px){
+    .customNav{
+        font-family: helvetica neue, arial, sans-serif;
+        font-weight: lighter;
+        line-height: 35px;
+        letter-spacing: .60px;
+        font-size: 35px;
+        float:right;
+        padding-top: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #f1f5ff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #fff7f2;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #fff7f2;
+        background-color: #142d51;
+    }
+
+    .customNav{
+        display:none;
+    }
+    
+}
+
+@media (max-width: 1000px){
+    .customNav{
+        font-family: helvetica neue, arial, sans-serif;
+        font-weight: lighter;
+        line-height: 35px;
+        letter-spacing: .60px;
+        font-size: 20px;
+        float:right;
+        padding-top: 40px;
+    }
+}
+
+@media (max-width:500px){
+    .customInput{
+        text-align: center;
+        width:300px;    
+    }
+    .mailInput{
+        width:300px;
+        color:#26497d;
+    }
+
+    .customDiv{
+        width:400px;
+        margin-top: 25px;
+        display:inline-block;
+        padding-right: 35px;
+        padding-left: 35px;
+        vertical-align: top;
+    }
+}
+
+/* fullscreen setup */
+html, body {
+    /* give this to all tags from html to .fullscreen */
+    height:100%;
+    margin-top: -10px;
+}
+.logo{
+  margin-top: 45px;
+}
+.hero-unit {
+    margin:0 auto;
+    color: #F5F5F5;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    /*background: #26497d;*/
+    padding-top: 5px;
+}
+
+.footer {
+    
+    text-align: center;
+    /*padding: 30px 0;
+    margin-top: 70px;*/
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color:white;
+    border-top: 1px solid #E5E5E5;
+}
+
+.btn,
+.btn-lg, 
+.btn-success{
+  font-family: helvetica neue, arial, sans-serif;
+  font-weight: lighter;
+}
+
+.mainCustom{
+    /*display: block;*/
+    /*-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;*/
+    font-family: helvetica neue, arial, sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+}
+
+p{
+    line-height: 25px;
+}
+
+
+/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+.fullscreen,
+.content-a {
+    width:100%;
+    min-height:100%;
+}
+.not-fullscreen,
+.not-fullscreen .content-a,
+.fullscreen.not-overflow,
+.fullscreen.not-overflow .content-a {
+    height:100%;
+    overflow:hidden;
+}
+
+/* content centering styles */
+.content-a {
+  display:table;
+}
+.content-b {
+  display:table-cell;
+  position:relative;
+  vertical-align:middle;
+  text-align:center;
+  min-height:100%;
+}
+
+.container{
+  width:50%;
+  background-color: hsla(333, 0%, 9%, 0.78);
+  border:1px;
+}
+
+@media (max-width: 900px){
+  .container{
+    width:70%;
+  }
+}
+@media (max-width: 620px){
+  .container{
+    width:100%;
+  }
+}
+/* visual styles */
+body{
+    margin:0;
+    font-family:sans-serif;
+    font-size:28px;
+    line-height:100px;
+  color:#ffffff;
+    text-align:center;
+}
+section {
+  background:#9ed100;
+}
+
+
+</style>
+<div class="fullscreen background" style="background-image:url('http://i.imgur.com/08NTX54.jpg');" >
+
+    <div class="container" >
+    <div class="logo"> <a href="index.html#"="" style="float:center;"><img src="http://getbarterly.com/1/logo.png" alt="logo"></a></div>
+    
+        <div class="content-a">
+            <div class="content-b">
+                    <!-- <div class="mainCustom"style="text-align:center;"> -->
+                <p>Tired of getting <b>screwed</b><br>by the <b>textbook industry</b>?</p>
+                <p><i>We were too. So, we're doing something about it!</i>
+                </p>
+                <p>Find a fellow <b>Aggie</b> on campus<br>
+                who <b>needs</b> a textbok you <b>have</b><br>
+                and <b>has</b> a textbook you <b>need.</b>
+                </p>
+                <br>
+                <a class="btn btn-lg btn-success customButton" ng-href="/courses"><span class = "glyphicon glyphicon-book"></span> Get Started</a>
+                <br>
+                <br>
+                
+            </div><!--content-b-->
+        </div><!--content-a-->
     </div>
-    <div class="hero-unit" >
-      <div class="mainCustom"style="text-align:center;">
-        
-        <p>Tired of getting <b>screwed</b><br>by the <b>textbook industry</b>?</p>
-        <p><i>We were too. So, we're doing something about it!</i>
-        </p>
-        <p>Find a fellow <b>Aggie</b> on campus<br>
-        who <b>needs</b> a textbok you <b>have</b><br>
-        and <b>has</b> a textbook you <b>need.</b>
-        </p>
-        <br>
-        <a class="btn btn-lg btn-success customButton" ng-href="/courses"><span class = "glyphicon glyphicon-book"></span> Get Started</a>
-        <br>
-        <br>
-        <br>
-        <div class = "footer">
-          <p>Barterly v.0.9 | 2014</p>
-        </div>
-      </div>
-      
-    </div>
-    <img src='http://getbarterly.com/1/waterfilter.jpg' id="bg" alt="">
+    
+    <br>
 </div>
+

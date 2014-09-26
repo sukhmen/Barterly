@@ -1,0 +1,58 @@
+.logo {
+	margin-top: 50px;
+}
+
+.second {
+	font-family: helvetica neue, arial, sans-serif;
+	font-size: 32px;
+	font-weight: lighter;
+	line-height: 0px;
+	position: relative;
+	
+}
+
+.third {
+	font-family: helvetica neue, arial, sans-serif;
+	font-size: 29px;
+	font-weight: lighter;
+	position: relative;
+	top: 15px;
+	line-height: 0px;
+}
+.fourth {
+	font-family: helvetica neue, arial, sans-serif;
+	font-size: 32px;
+	font-weight: lighter;
+	line-height: 0px;
+	position: relative;
+	top: 30px;
+}
+
+p {
+	color: white;
+}
+
+#wrapper {
+	width: 480px;
+	margin: 0px auto;
+	text-align: center
+}
+
+#background {
+	background-image: url('finalbackground.jpg');
+	width: 1265px;
+	height: 590px;
+	position:relative;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+.fb-like {
+top:120px;
+margin-right: 20px;
+}
+
+

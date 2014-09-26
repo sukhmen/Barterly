@@ -1,26 +1,12 @@
-img#bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-  z-index: -1;
-    
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-    
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+/* fullscreen setup */
+html, body {
+    /* give this to all tags from html to .fullscreen */
+    height:100%;
+    margin-top: -10px;
 }
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img#bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+.logo{
+  margin-top: 45px;
 }
-
 .hero-unit {
     margin:0 auto;
     color: #F5F5F5;
@@ -41,12 +27,19 @@ img#bg {
     border-top: 1px solid #E5E5E5;
 }
 
+.btn,
+.btn-lg, 
+.btn-success{
+  font-family: helvetica neue, arial, sans-serif;
+  font-weight: lighter;
+}
+
 .mainCustom{
     /*display: block;*/
-    -webkit-margin-before: 1em;
+    /*-webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    -webkit-margin-end: 0px;*/
     font-family: helvetica neue, arial, sans-serif;
     font-size: 24px;
     font-weight: lighter;
@@ -56,5 +49,71 @@ img#bg {
 
 p{
     line-height: 25px;
+}
+
+
+/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+.fullscreen,
+.content-a {
+    width:100%;
+    min-height:100%;
+}
+.not-fullscreen,
+.not-fullscreen .content-a,
+.fullscreen.not-overflow,
+.fullscreen.not-overflow .content-a {
+    height:100%;
+    overflow:hidden;
+}
+
+/* content centering styles */
+.content-a {
+  display:table;
+}
+.content-b {
+  display:table-cell;
+  position:relative;
+  vertical-align:middle;
+  text-align:center;
+  min-height:100%;
+}
+
+.container{
+  width:50%;
+  background-color: hsla(333, 0%, 9%, 0.78);
+  border:1px;
+}
+
+@media (max-width: 900px){
+  .container{
+    width:70%;
+  }
+}
+@media (max-width: 620px){
+  .container{
+    width:100%;
+  }
+}
+/* visual styles */
+body{
+    margin:0;
+    font-family:sans-serif;
+    font-size:28px;
+    line-height:100px;
+  color:#ffffff;
+    text-align:center;
+}
+section {
+  background:#9ed100;
 }
 

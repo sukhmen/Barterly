@@ -1,68 +1,33 @@
-  <div class="homeCustom">
-    <div class="logo" style="text-align:center;"> <a ="index.html#"=""><img src="http://getbarterly.com/1/logo.png" alt="logo"></a></div>
-  </div>  
-
+<!-- <link rel="stylesheet" href="app/main/app.css"> -->
+<div ng-include="'components/navbar/navbar.html'"></div>
   <div class="homeCustom"> 
     <div class = "customDiv">
       <p class="courseTitle">I <b>HAVE</b> BOOKS FOR:</p><p ng-repeat ="course in hasCourses track by $index">{{course}}</p>
-      <div class="input-group customInput" ng-repeat = "course in hasCourses track by $index" style="margin:0 auto;">
+      <div class="input-group customInput" ng-repeat = "course in hasCourses track by $index"style="margin:0 auto" >
         <input type="text" ng-model = "hasCourses[$index]" placeholder="Enter Courses You Have Books For" typeahead="course.Link for course in coursesForHas | filter:{Link:$viewValue}" class="form-control" typeahead-on-select="onSelectHas($index,$model)" typeahead-editable='false' typeahead-min-length='3'>
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" ng-click="removeCourseHas($index)" ><span class="glyphicon glyphicon-remove"></span></button>
-          
         </span>
       </div><!-- /input-group -->
       <button class = "btn btn-success " ng-click = "addHas()" style="z-index:10"><span class="glyphicon glyphicon-plus"></span> Add Course</button>
 
-    </div><!-- /.col-lg-6 -->
-    <div class="customDiv">
+    </div><!-- CustomDiv -->
+    <div class="customDiv" style="padding-bottom:25px">
       <p class="courseTitle">I <b>NEED</b> BOOKS FOR:</p><p ng-repeat ="course in needCourses track by $index">{{course}}</p>
       <div class="input-group customInput" ng-repeat = "course in needCourses track by $index" style="margin:0 auto">
         <input type="text" ng-model = "needCourses[$index]" placeholder="Enter Courses You Need Books For" typeahead="course.Link for course in coursesForNeeds | filter:{Link:$viewValue}" class="form-control" typeahead-on-select="onSelectNeed($index,$model)" typeahead-editable='false' typeahead-min-length='3'>
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" ng-click="removeCourseNeed($index)"><span class="glyphicon glyphicon-remove"></span></button>
-          <br>
-          
         </span>
-      </div>
+      </div><!--CustomInput-->
       <button class = "btn btn-success" style="font-family: helvetica neue, arial, sans-serif;" ng-click = "addNeed()"><span class="glyphicon glyphicon-plus"></span> Add Course</button><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-
-
-<!--
-<br>
-<br>
-<br>
-<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup" >
-<form action="//getbarterly.us9.list-manage.com/subscribe/post?u=65853308ccf0c65587425cf5c&amp;id=651f51120d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <h2></h2>
-<div class="mc-field-group customInput">
-  <p>Enter your .edu e-mail: </p>
-  <input type="email" value="" name="EMAIL" class="mailInput" id="mce-EMAIL" style="width:350px;margin:0 auto">
-  <br>
-  <div id="mce-responses" class="clear messageDiv">
-    <div class="response" id="mce-error-response" style="display:none;"></div>
-    <div class="response" id="mce-success-response" style="display:none; float:none;"></div>
-  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_65853308ccf0c65587425cf5c_651f51120d" tabindex="-1" value=""></div>
-    </div>
-  <button type="submit" value="Get me started!" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success customButton" style="margin:0 auto;">Get me started!</button>
-  <br>
-</div>
-  
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-
+    </div><!-- CustomDiv -->
 <!-- Begin MailChimp Signup Form -->
-<br>
-<br>
+
 <div id="mc_embed_signup" class="customInput" style="margin:0 auto;">
 <form action="//onmodulus.us9.list-manage.com/subscribe/post?u=18646592d53563b1667bad389&amp;id=15ab176ddf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
   <p>Email Address:</p>
-  <input type="email" value='{{userEmail}}' ng-model="userEmail" style="width:350px;margin:0 auto"name="EMAIL" class="mailInput" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value='{{userEmail}}' ng-model="userEmail" style="margin:0 auto"name="EMAIL" class="mailInput" id="mce-EMAIL" placeholder="email address" required>
   <input type="text" value = '{{hasCourses[0]}}' style="margin:0 auto" name = "HAVE1" id="mce-HAVE1" ng-show='false'>
   <input type = "text" value = "{{hasCourses[1]}}" style="margin:0 auto" name = "HAVE2" id="mce-HAVE2" ng-show='false'>
   <input type ="text" value = "{{hasCourses[2]}}" style="margin:0 auto" name = "HAVE3" id="mce-HAVE3" ng-show='false'>
@@ -98,11 +63,12 @@
 
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_18646592d53563b1667bad389_15ab176ddf" tabindex="-1" value=""></div>
-    <div class="clear"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success customButton">Get me Started!</button</div>
+    <div class="clear"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success customButton">Done!</button></div>
 </form>
 </div>
 
 <!--End mc_embed_signup-->
   </div><!-- /.row -->
+
 
   

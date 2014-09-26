@@ -251,7 +251,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/public',
           '<%= yeoman.dist %>/public/assets/images'
         ],
-        // This is so we update image references in our ng-templates
+    //     // This is so we update image references in our ng-templates
         patterns: {
           js: [
             [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
@@ -268,7 +268,10 @@ module.exports = function (grunt) {
     //       cwd: '<%= yeoman.client %>/assets/images',
     //       src: '{,*/}*.{png,jpg,jpeg,gif}',
     //       dest: '<%= yeoman.dist %>/public/assets/images'
-    //     }]
+    //     }],
+    //     options:{
+    //       cache:false
+    //     }
     //   }
     // },
 
@@ -310,7 +313,7 @@ module.exports = function (grunt) {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true
         },
-        usemin: 'app/app.js'
+         usemin: 'app/app.js'
       },
       main: {
         cwd: '<%= yeoman.client %>',
@@ -407,7 +410,7 @@ module.exports = function (grunt) {
         }
       },
       dist: [
-        // 'imagemin',
+        //'imagemin',
         'svgmin'
       ]
     },

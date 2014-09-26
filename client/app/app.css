@@ -32,12 +32,12 @@
  */
 
  html{
-    background-color: #26497d;
+    background-color: #142638;
     /*display: block;*/
-    -webkit-margin-before: 1em;
+    /*-webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    -webkit-margin-end: 0px;*/
     font-family: helvetica neue, arial, sans-serif;
     font-size: 24px;
     font-weight: lighter;
@@ -45,6 +45,9 @@
     letter-spacing: .60px;
 }
 
+body{
+    background-color: #142638;
+}
 
 #banner{
     text-align:center; 
@@ -58,6 +61,7 @@
 }
 
 .footer {
+    background-color: #142638;
     text-align: center;
     /*padding: 30px 0;
     margin-top: 70px;*/
@@ -80,9 +84,9 @@
     line-height: 35px;
     letter-spacing: .60px;
     color:white;
-    background-color:#26497d;
+    background-color:#142638;
     text-align: center;
-    margin-top: -25px;
+    margin-top: -50px;
     padding-top: 25px;
     left:0;
     right:0;
@@ -112,7 +116,8 @@
 
 .customInput{
     text-align: center;
-    width:400px;    
+    width:400px;
+    font-weight: normal;    
 }
 
 .mailInput{
@@ -125,8 +130,19 @@
     padding-right: 35px;
     padding-left: 35px;
     vertical-align: top;
-    width:420px;
+    width:440px;
+    margin-top: 95px;
 }
+
+#fifth {
+    font-family: helvetica neue;
+    font-weight: bold;
+    font-size: 55px;
+    color: white;
+    margin-top: 90px;
+    text-align: center;
+}
+
 
 p{
     line-height: 25px;
@@ -152,6 +168,48 @@ p{
     margin:0 auto;
 }
 
+.share{
+    padding:10px;
+}
+a{
+    color:white;
+    font-style: none;
+    text-decoration: none;
+    cursor: default;
+}
+
+a:hover.notCurrent{
+    color:#c1b9b9;
+    text-decoration: none;
+}
+
+a:hover.currentPage{
+    color:white;
+    text-decoration: none;
+}
+
+.topNav{
+    top:-24px;
+}
+
+.notCurrent{
+    /*color:#5cb85c;*/
+    color:#c1b9b9;
+}
+
+.customNav{
+    font-family: helvetica neue, arial, sans-serif;
+    font-weight: lighter;
+    line-height: 35px;
+    letter-spacing: .60px;
+    font-size: 45px;
+    float:right;
+    padding-top: 40px;
+}
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -159,7 +217,7 @@ p{
     padding: 0.2em 0;
 }
 .navbar-default {
-    background-color: #26497d;
+    background-color: #142638;
     border-color: white;
     font-size: 15px;
 }
@@ -210,7 +268,17 @@ p{
 .navbar-default .navbar-link:hover {
     color: #fff7f2;
 }
-
+@media (max-width: 1200px){
+    .customNav{
+        font-family: helvetica neue, arial, sans-serif;
+        font-weight: lighter;
+        line-height: 35px;
+        letter-spacing: .60px;
+        font-size: 35px;
+        float:right;
+        padding-top: 40px;
+    }
+}
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #f1f5ff;
@@ -221,5 +289,42 @@ p{
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
         color: #fff7f2;
         background-color: #142d51;
+    }
+
+    .customNav{
+        display:none;
+    }
+    
+}
+
+@media (max-width: 1000px){
+    .customNav{
+        font-family: helvetica neue, arial, sans-serif;
+        font-weight: lighter;
+        line-height: 35px;
+        letter-spacing: .60px;
+        font-size: 20px;
+        float:right;
+        padding-top: 40px;
+    }
+}
+
+@media (max-width:500px){
+    .customInput{
+        text-align: center;
+        width:300px;    
+    }
+    .mailInput{
+        width:300px;
+        color:#26497d;
+    }
+
+    .customDiv{
+        width:400px;
+        margin-top: 25px;
+        display:inline-block;
+        padding-right: 35px;
+        padding-left: 35px;
+        vertical-align: top;
     }
 }

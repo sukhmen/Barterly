@@ -10,11 +10,8 @@ angular.module('barterApp')
     var coursePromise = function(){
       CourseService.getCourses()
         .then(function(data){
-          console.log('data:', data);
             var data1 = data;
             var data2 = data;
-            console.log('data1:', data1);
-            console.log('data2:', data2);
             $scope.coursesForHas = data1;
             $scope.coursesForNeeds = data2;
         });
@@ -93,4 +90,9 @@ angular.module('barterApp')
       $scope.coursesForNeeds.sort(function(a, b){return a-b});
       $scope.needCourses.splice($index,1);
     };
+
+    $scope.sendForm = function(form){
+      console.log('form:', form);
+      var action = "//onmodulus.us9.list-manage.com/subscribe/post?u=18646592d53563b1667bad389&amp;id=15ab176ddf";
+    }
   });
